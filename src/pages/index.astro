@@ -3,9 +3,7 @@ import type {CollectionEntry} from "astro:content"
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
-type Book = CollectionEntry<"book">
-
-const books: Book[] = await getCollection("books")
+const books = await getCollection("books")
 export const prerender = true
 ---
 
